@@ -8,9 +8,7 @@
         </p>
         <p class="footer__content-copyright">
           Fait avec
-          <NuxtLink to="https://fr.nuxtjs.org/" target="_blank">
-            NuxtJs
-          </NuxtLink>
+          <a href="https://fr.nuxtjs.org/" target="_blank"> NuxtJs </a>
           | Copyright © 2020 Lola Gauchet | All rights reserved
         </p>
       </div>

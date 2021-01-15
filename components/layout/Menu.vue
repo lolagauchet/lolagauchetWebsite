@@ -1,17 +1,7 @@
 <template>
   <div class="menu container">
     <p class="menu__name">lola gauchet</p>
-    <div class="menu__wrapper">
-      <ul class="menu__list">
-        <li class="menu__item">
-          <NuxtLink to="#exp">Expériences & parcours</NuxtLink>
-        </li>
-        <li class="menu__item">
-          <NuxtLink to="#projects">Projets</NuxtLink>
-        </li>
-      </ul>
-      <Button to="#contact">Discutons</Button>
-    </div>
+    <Button to="#contact">Discutons</Button>
   </div>
 </template>
 

@@ -1,19 +1,50 @@
 <template>
-  <form @submit.prevent="submitForm">
-    <input type="text" v-model="lastname" name="lastname" placeholder="Nom" />
+  <div>
+    <div v-if="isSubmitted === false">
+      <form @submit.prevent="submitForm">
+        <input
+          type="checkbox"
+          name="_honeypot"
+          style="display: none"
+          tabindex="-1"
+          autocomplete="off"
+        />
+        <input type="hidden" name="_redirect" value="https://google.com" />
+        <input
+          type="text"
+          v-model="lastname"
+          name="lastname"
+          placeholder="Nom"
+        />
 
-    <input type="text" v-model="name" name="name" placeholder="Prénom" />
+        <input type="text" v-model="name" name="name" placeholder="Prénom" />
 
-    <input
-      type="email"
-      name="email"
-      v-model="email"
-      placeholder="Adresse mail"
-    />
-    <input type="text" name="phone" v-model="phone" placeholder="Téléphone" />
-    <textarea name="message" v-model="message" placeholder="Message"></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
+        <input
+          type="email"
+          name="email"
+          v-model="email"
+          placeholder="Adresse mail *"
+          required
+        />
+        <input
+          type="text"
+          name="phone"
+          v-model="phone"
+          placeholder="Téléphone"
+        />
+        <textarea
+          name="message"
+          v-model="message"
+          placeholder="Message *"
+          required
+        ></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+    <div v-else>
+      <p>Merci pour votre message. Je vous recontacte au plus vite.</p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -22,6 +53,7 @@ const FORMSPARK_ACTION_URL = 'https://submit-form.com/r7rXiGvi'
 export default {
   data() {
     return {
+      isSubmitted: false,
       lastname: '',
       name: '',
       email: '',
@@ -45,7 +77,7 @@ export default {
           email: this.email,
         }),
       }).then(() => {
-        alert('Email envoyé')
+        this.isSubmitted = true
       })
     },
   },
