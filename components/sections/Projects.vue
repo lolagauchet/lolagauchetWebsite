@@ -15,30 +15,50 @@
           </TagContainer>
         </Card>
       </div>
-      <ImageContainer bluepale class="large"
-        ><img src="~assets/img/1.png" alt=""
-      /></ImageContainer>
+      <ImageContainer
+        bluepale
+        :src="require('~/assets/img/1.png')"
+        alt="projet"
+        class="large"
+      ></ImageContainer>
     </div>
     <div class="projects__wrapper" data-sal="slide-up">
-      <ImageContainer pink class="large"
-        ><img src="~assets/img/2.png" alt=""
-      /></ImageContainer>
-      <ImageContainer greenpale class="small"
-        ><img src="~assets/img/3.png" alt=""
-      /></ImageContainer>
+      <ImageContainer
+        pink
+        class="large"
+        :src="require('~/assets/img/2.png')"
+        alt="projet"
+      ></ImageContainer>
+      <ImageContainer
+        greenpale
+        :src="require('~/assets/img/3.png')"
+        alt="projet"
+        class="small"
+      >
+      </ImageContainer>
     </div>
     <div class="projects__wrapper" data-sal="slide-up">
-      <ImageContainer blue class="small"
-        ><img src="~assets/img/4.png" alt=""
-      /></ImageContainer>
-      <ImageContainer black class="large"
-        ><img src="~assets/img/5.png" alt=""
-      /></ImageContainer>
+      <ImageContainer
+        blue
+        :src="require('~/assets/img/4.png')"
+        alt="projet"
+        class="small"
+      ></ImageContainer>
+      <ImageContainer
+        black
+        :src="require('~/assets/img/5.png')"
+        class="large"
+        alt="projet"
+      ></ImageContainer>
     </div>
     <div class="projects__wrapper">
-      <ImageContainer grey class="large" data-sal="slide-up"
-        ><img src="~assets/img/6.png" alt=""
-      /></ImageContainer>
+      <ImageContainer
+        grey
+        :src="require('~/assets/img/6.png')"
+        alt="projet"
+        class="large"
+        data-sal="slide-up"
+      ></ImageContainer>
       <div class="small card__wrapper" data-sal="slide-left">
         <Card left green>
           <h3 class="projects__sub">Développement Application Mobile</h3>
@@ -51,12 +71,18 @@
       </div>
     </div>
     <div class="projects__wrapper" data-sal="slide-up">
-      <ImageContainer grey class="small"
-        ><img src="~assets/img/7.png" alt=""
-      /></ImageContainer>
-      <ImageContainer green class="large"
-        ><img src="~assets/img/8.png" alt=""
-      /></ImageContainer>
+      <ImageContainer
+        grey
+        :src="require('~/assets/img/7.png')"
+        alt="projet"
+        class="small"
+      ></ImageContainer>
+      <ImageContainer
+        green
+        :src="require('~/assets/img/8.png')"
+        alt="projet"
+        class="large"
+      ></ImageContainer>
     </div>
   </div>
 </template>
@@ -78,8 +104,8 @@
       padding: 20px;
     }
     &__wrapper {
-      display: flex;
       align-items: center;
+      display: flex;
       justify-content: flex-end;
       margin-left: 30px;
       @media screen and (max-width: $mobile) {

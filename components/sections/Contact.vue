@@ -17,12 +17,16 @@
           href="/Lola_Gauchet_CV.pdf"
           class="button contact__socials-cv"
           target="_blank"
+          rel="noopener"
+          name="Lien vers CV"
           >Voir mon CV</a
         >
         <a
           href="https://www.linkedin.com/in/lola-gauchet/"
           class="contact__socials-linkedin"
           target="_blank"
+          rel="noopener"
+          name="Linkedin logo"
         >
           <svg
             width="38"
@@ -41,6 +45,8 @@
           href="https://github.com/lolagauchet"
           class="contact__socials-github"
           target="_blank"
+          rel="noopener"
+          name="Github logo"
         >
           <svg
             width="38"
@@ -61,9 +67,9 @@
 </template>
 <style lang="scss" scoped>
 .contact {
-  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 70px;
   @media screen and (max-width: $mobile) {
     margin-top: 80px;
   }
@@ -73,9 +79,9 @@
   .button {
     background-color: $black;
     border: 1px solid $black;
-    padding: 10px 16px;
     color: $white;
     font-size: 16px;
+    padding: 10px 16px;
     transition: $transition;
     &:hover {
       background-color: $white;
@@ -109,17 +115,17 @@
       }
     }
     &-list {
+      align-items: center;
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       width: 100%;
       a {
         @media screen and (max-width: $mobile) {
           margin-top: 10px;
         }
         svg {
-          width: 40px;
           height: 40px;
+          width: 40px;
           path {
             transition: $transition;
           }
@@ -131,8 +137,8 @@
     }
     &-linkedin,
     &-github {
-      margin-left: 20px;
       line-height: 0;
+      margin-left: 20px;
     }
   }
 }

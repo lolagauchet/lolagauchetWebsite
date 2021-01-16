@@ -17,9 +17,9 @@
     justify-content: space-between;
   }
   span {
-    width: 30%;
-    height: 2px;
     background-color: $green;
+    height: 2px;
+    width: 30%;
   }
   &__name {
     font-weight: 500;
@@ -28,8 +28,8 @@
   &__list {
     display: flex;
     margin: 0;
-    padding: 0;
     margin-right: 20px;
+    padding: 0;
     @media screen and (max-width: $small) {
       display: none;
     }
@@ -40,16 +40,16 @@
       font-size: 16px;
       position: relative;
       &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
         border-bottom: 3px solid $green;
         bottom: -4px;
+        content: '';
         left: 0;
         padding-bottom: 4px;
-        transform: scaleX(0);
-        z-index: -1;
+        position: absolute;
         transition: transform 0.3s ease-in-out;
+        transform: scaleX(0);
+        width: 100%;
+        z-index: -1;
         @media screen and (max-width: $mobile) {
           font-size: 14px;
         }

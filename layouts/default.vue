@@ -10,7 +10,7 @@
 import sal from 'sal.js'
 export default {
   mounted() {
-    sal()
+    sal({})
   },
 }
 </script>

@@ -11,39 +11,39 @@ body *{
 }
 
 h1, .h1{
+    color: $white;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
-    text-transform: uppercase;
-    color: $white;
     margin: 0;
+    text-transform: uppercase;
     @media screen and (max-width: $mobile) {
         font-size: 32px;
     }
     @media screen and (max-width: $small) {   
-        font-size: 30px;
+        font-size: 26px;
     }
 }
 h2, .h2{
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
     margin: 0;
+    text-transform: uppercase;
     span{
         position: relative;
         &:before{
-            content: "";
-            position: absolute;
-            width: 105%;
-            height: 14px;
             background-color: $green;
-            top: 50%;
+            content: "";
+            height: 14px;
             left: 50%;
+            position: absolute;
+            top: 50%;
             transform: translate(-50%, -50%);
+            width: 105%;
             z-index: -1;
         }
     }
@@ -65,9 +65,9 @@ h3, .h3{
     }
 }
 .container{
+    margin: 0 auto;
     max-width: $container;
     padding: 0 20px;
-    margin: 0 auto;
     width: 100%;
 }
 .large{
@@ -83,13 +83,13 @@ h3, .h3{
     }
 }
 .subtitle{
+    display: block;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
-    text-transform: uppercase;
     margin-top: 5px;
     margin-bottom: 15px;
-    display: block;
+    text-transform: uppercase;
     @media screen and (max-width: $mobile) {
         font-size: 12px;
     }
@@ -97,14 +97,14 @@ h3, .h3{
 .line{
     position: relative;
     &:before{
-        content: "";
-        position: absolute;
-        width: 104%;
-        height: 6px;
         background-color: $green;
-        top: 50%;
+        content: "";
+        height: 6px;
         left: 50%;
+        position: absolute;
+        top: 50%;
         transform: translate(-50%, -50%);
+        width: 104%;
         z-index: -1;
     }
 }

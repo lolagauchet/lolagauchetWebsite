@@ -17,27 +17,28 @@
 
 <style lang="scss" scoped>
 .header {
+  align-items: center;
   background-image: url('~assets/img/portrait.png');
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 430px;
-  position: relative;
   display: flex;
+  height: 430px;
   justify-content: flex-end;
-  align-items: center;
+  position: relative;
   @media screen and (max-width: $mobile) {
     background-size: cover;
     background-position: center center;
+    height: 260px;
   }
   &:after {
     background: linear-gradient(180deg, #0c1110 0%, #090e0d 100%);
     content: '';
-    position: absolute;
-    width: 100%;
     height: 100%;
     left: 0;
+    position: absolute;
     top: 0;
+    width: 100%;
     z-index: -1;
   }
   &__content {
@@ -51,11 +52,20 @@
   }
   &__title {
     margin-bottom: 40px;
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
     &-city {
+      display: block;
+      color: $white;
       font-weight: 300;
       font-size: 24px;
-      color: $white;
-      display: block;
+      @media screen and (max-width: $mobile) {
+        font-size: 22px;
+      }
+      @media screen and (max-width: $small) {
+        font-size: 20px;
+      }
     }
   }
 }

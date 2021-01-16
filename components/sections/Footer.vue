@@ -19,11 +19,11 @@
 <style lang="scss" scoped>
 .footer {
   background-color: $background;
-  padding: 24px 0;
   margin-top: 60px;
+  padding: 24px 0;
   &__content {
-    text-align: center;
     font-weight: 300;
+    text-align: center;
     &-infos {
       font-size: 14px;
     }

@@ -10,34 +10,26 @@
           autocomplete="off"
         />
         <input type="hidden" name="_redirect" value="https://google.com" />
-        <input
-          type="text"
-          v-model="lastname"
-          name="lastname"
-          placeholder="Nom"
-        />
-
-        <input type="text" v-model="name" name="name" placeholder="Prénom" />
-
-        <input
-          type="email"
-          name="email"
-          v-model="email"
-          placeholder="Adresse mail *"
-          required
-        />
-        <input
-          type="text"
-          name="phone"
-          v-model="phone"
-          placeholder="Téléphone"
-        />
-        <textarea
-          name="message"
-          v-model="message"
-          placeholder="Message *"
-          required
-        ></textarea>
+        <label>
+          <span>Nom *</span>
+          <input type="text" v-model="lastname" name="lastname" required />
+        </label>
+        <label>
+          <span>Prénom *</span>
+          <input type="text" v-model="name" name="name" required />
+        </label>
+        <label>
+          <span>Adresse mail *</span>
+          <input type="email" name="email" v-model="email" required />
+        </label>
+        <label>
+          <span>Téléphone</span>
+          <input type="text" name="phone" v-model="phone" />
+        </label>
+        <label class="full">
+          <span>Message *</span>
+          <textarea name="message" v-model="message" required></textarea>
+        </label>
         <button type="submit">Envoyer</button>
       </form>
     </div>
@@ -90,21 +82,37 @@ form {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+label {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  position: relative;
+  margin-bottom: 20px;
+  &.full {
+    width: 100%;
+  }
+  span {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: $white;
+    padding: 0 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+  }
+}
 input,
 textarea {
   border: 1px solid $black;
-  padding: 10px 22px;
+  padding: 15px 30px;
   font-size: 14px;
-  margin-bottom: 10px;
   &::placeholder {
     color: rgba($black, 0.6);
     font-size: 14px;
-  }
-}
-input {
-  width: 49%;
-  @media screen and (max-width: $mobile) {
-    width: 100%;
   }
 }
 textarea {

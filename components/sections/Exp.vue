@@ -121,14 +121,14 @@
   &__list {
     &-title {
       align-items: flex-end;
-      justify-content: center;
       border-left: 4px solid transparent;
+      justify-content: center;
       padding: 0 38px;
       @media screen and (max-width: $mobile) {
         align-items: flex-start;
+        margin-bottom: 20px;
         order: -1;
         padding: 0;
-        margin-bottom: 20px;
       }
     }
   }

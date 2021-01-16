@@ -11,7 +11,7 @@
       green: green,
     }"
   >
-    <slot></slot>
+    <img :src="`${src}`" :alt="alt" loading="lazy" />
   </div>
 </template>
 
@@ -25,6 +25,8 @@ export default {
     black: { type: Boolean, default: false },
     grey: { type: Boolean, default: false },
     green: { type: Boolean, default: false },
+    src: { type: String, required: true },
+    alt: { type: String, required: true },
   },
 }
 </script>
