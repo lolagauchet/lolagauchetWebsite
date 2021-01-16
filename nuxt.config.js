@@ -20,7 +20,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'Je m\'appelle Lola Gauchet, je suis développeuse Front-end spécialisée Drupal depuis 2ans. Ayant la volonté d’évoluer sur des projets en Vue.js ou React je suis actuellement à la recherche d’un nouveau poste. Allier expérience utilisateur et bonnes pratiques web est source de motivation pour moi. Je suis motivée pour rendre vie à vos designs afin de délivrer des outils digitaux performants et adaptés à la demande client.'
+        content: 'Je m\'appelle Lola Gauchet, je suis développeuse Front-end spécialisée Drupal depuis 2ans. Ayant la volonté d’évoluer sur des projets en Vue.js ou React je suis actuellement à la recherche d’un nouveau poste.'
       },
       {
         hid: 'og:type',
@@ -35,7 +35,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/_nuxt/img/og.a37eb9e.jpg'
+        content: 'www.lolagauchet.fr/_nuxt/img/og.a37eb9e.jpg'
       },
     ],
     link: [

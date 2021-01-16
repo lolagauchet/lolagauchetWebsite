@@ -15,8 +15,7 @@
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.6",
     "sal.js": "^0.8.2",
-    "sass-loader": "^10.1.1",
-    "vue-pdf": "^4.2.0"
+    "sass-loader": "^10.1.1"
   },
   "devDependencies": {
     "eslint-config-prettier": "^6.12.0",
