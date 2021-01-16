@@ -110,6 +110,7 @@
       margin-left: 30px;
       @media screen and (max-width: $mobile) {
         margin-left: 0;
+        order: -1;
       }
       .card {
         padding: 30px 38px;
