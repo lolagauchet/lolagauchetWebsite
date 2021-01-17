@@ -35,7 +35,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'www.lolagauchet.fr/_nuxt/img/og.a37eb9e.jpg'
+        content: 'www.lolagauchet.fr/og.jpg'
       },
     ],
     link: [
